@@ -13,6 +13,9 @@ public class Intersection {
         System.out.println("\n Intersection -> " + Arrays.toString(intersect(a, b)) );
 
     }
+
+
+    // TC - o(n^2)
     private static int[] intersect(int[] a, int[] b){
 
         Set<Integer>intersectionSet = new HashSet<>();
@@ -31,4 +34,33 @@ public class Intersection {
         }
         return intersectionList;
     }
+
+
+
 }
+
+// class Solution {
+
+//     public int[] intersection(int[] nums1, int[] nums2) {
+//         Set<Integer>aSet = new HashSet<>();
+//         Set<Integer>bSet = new HashSet<>();
+
+//         for(int i : nums1 ){
+//             aSet.add(i);
+//         }
+
+//         for(int i : nums2){
+//             if(aSet.contains(i)){
+//                 bSet.add(i);
+//             }
+//         }
+
+//         int [] intersectionArray = new int[bSet.size()];
+//         int i=0;
+//         for(int element : bSet){
+//             intersectionArray[i]=element;
+//             i++;
+//         }
+//         return intersectionArray;
+//     }
+// }
