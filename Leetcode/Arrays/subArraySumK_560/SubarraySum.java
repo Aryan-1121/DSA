@@ -30,6 +30,7 @@ public class SubarraySum {
         }
         return count;
     }
+    
     private static int subarraySum2(int[] nums, int k){
 
         int count=0; 
