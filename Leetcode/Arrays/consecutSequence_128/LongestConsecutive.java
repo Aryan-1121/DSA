@@ -11,7 +11,7 @@ public class LongestConsecutive {
         System.out.println("Array - "+Arrays.toString(nums));
 
         // System.out.println("longest consecutive sequence - " +findConsecuticeSeq(nums));
-        System.out.println("longest consecutive sequence - " +findConsecuticeSeq2(nums));
+        System.out.println("longest consecutive sequence - " +findConsecuticeSeq(nums));
 
     
     }
