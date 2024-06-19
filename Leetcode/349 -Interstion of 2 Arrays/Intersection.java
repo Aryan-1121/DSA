@@ -15,27 +15,48 @@ public class Intersection {
     }
 
 
-    // TC - o(n^2)
-    private static int[] intersect(int[] a, int[] b){
+    // // TC - o(n^2)
+    // private static int[] intersect(int[] a, int[] b){
 
-        Set<Integer>intersectionSet = new HashSet<>();
-        for(int i=0 ; i<a.length; i++){
-            for (int j=0; j<b.length; j++){
-                if(a[i]==b[j]) {
-                    intersectionSet.add(a[i]);
+    // Set<Integer>intersectionSet = new HashSet<>();
+    // for(int i=0 ; i<a.length; i++){
+    // for (int j=0; j<b.length; j++){
+    // if(a[i]==b[j]) {
+    // intersectionSet.add(a[i]);
+    // }
+    // }
+    // }
+    // int[] intersectionList = new int[intersectionSet.size()];
+    // int k=0;
+    // for(int element: intersectionSet){
+    // intersectionList[k]=element;
+    // k++;
+    // }
+    // return intersectionList;
+    // }
+
+    // instead of using 2nd set we can directly use int[] which we will return
+
+    private static int[] intersect(int[] a, int[] b) {
+
+        Set<Integer> setA = new HashSet<>();
+        for (int element : a) {
+            setA.add(element);
+        }
+
+            int ans[] = new int[Math.max(a.length, b.length)];
+            int i = 0;
+            for (int element : b) {
+                if (setA.contains(element)) {
+                    ans[i++] = element;
+                    System.out.println(element);
+
                 }
             }
-        }
-        int[] intersectionList = new int[intersectionSet.size()];
-        int k=0;
-        for(int element: intersectionSet){
-            intersectionList[k]=element;
-            k++;
-        }
-        return intersectionList;
-    }
+            // System.out.println(ans);
 
-
+            return ans;
+        }
 
 }
 
