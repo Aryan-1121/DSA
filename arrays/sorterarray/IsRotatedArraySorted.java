@@ -1,5 +1,6 @@
 package arrays.sorterarray;
 
+// https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
 public class IsRotatedArraySorted {
 
   private static boolean isSorted(int[] arr) {
