@@ -12,22 +12,21 @@ public class MaxConsecutiveOnes {
     System.out.println("max consicutive ones = " + getMaxOnes(new int[] {}));
   }
 
-  public static int getMaxOnes(int[] arr) {
+  public static int getMaxOnes(int[] nums) {
 
-    int s = 0, f = 0, temp = 0, max = 0;
-    int n = arr.length;
+    int maxOnes = 0;
+    int tempOnes = 0;
+    for (int i = 0; i < nums.length; i++) {
 
-    for (int i = 0; i < n; i++) {
-      if (arr[f] == 1) {
-        s = f;
-        temp++;
-        max = Math.max(max, temp);
+      if (nums[i] == 1) {
+
+        tempOnes++;
       } else {
-        temp = 0;
-      }
-      f++;
+          maxOnes = Math.max(maxOnes, tempOnes);
+          tempOnes = 0;
+        }
     }
-
-    return max;
+    maxOnes = Math.max(maxOnes, tempOnes);
+    return maxOnes;
   }
 }
